@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
         viewModel = ViewModelProviders.of(this).get(MyViewModel.class);
+        //视屏里最后加了这句，不加oncreate重新创建的时候会回到最初的样子
+        //但是多旋转几次，回来的时候还是原来的值
         binding.textView.setText(String.valueOf(viewModel.num));
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
