@@ -13,6 +13,9 @@ import android.view.View;
 public class LiveDataTestActivity extends AppCompatActivity {
 
 
+    /**
+     * 感知数据的变化，自动刷新界面
+     */
     private ViewModelWithLiveData viewModelWithLiveData;
     private ActivityLiveDataTestBinding binding ;
 
@@ -29,7 +32,9 @@ public class LiveDataTestActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_live_data_test);
         viewModelWithLiveData = ViewModelProviders.of(this).get(ViewModelWithLiveData.class);
         //记住是给livedata设置观察
-        viewModelWithLiveData.getLikedNumber().observe(this, new Observer<Integer>() {
+        viewModelWithLiveData
+                .getLikedNumber()
+                .observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(Integer integer) {
                 binding.textView2.setText(String.valueOf(integer));

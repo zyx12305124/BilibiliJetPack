@@ -24,4 +24,9 @@ public class ViewModelWithLiveData extends ViewModel {
     public void addNumber(int n){
         likedNumber.setValue(likedNumber.getValue()+n);
     }
+
+    //这里写的每一个方法都要对livedata进行操作
+    public void add(){
+        likedNumber.setValue(likedNumber.getValue()+1);
+    }
 }
