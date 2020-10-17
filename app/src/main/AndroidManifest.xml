@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".androidViewModel.AndroidViewModelActivity"></activity>
-        <activity android:name=".viewModelSavedStateTest.SavedStateActivity">
+        <activity android:name=".navigation.NavigationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter></activity>
+        <activity android:name=".androidViewModel.AndroidViewModelActivity" />
+        <activity android:name=".viewModelSavedStateTest.SavedStateActivity">
         </activity>
-        <activity android:name=".scoreDemo.ScoreActivity"></activity>
+        <activity android:name=".scoreDemo.ScoreActivity" />
         <activity android:name=".dataBindingTest.DataBindingTestActivity" />
         <activity android:name=".liveDataTest.LiveDataTestActivity" />
         <activity android:name=".viewModelTest.MainActivity" />
